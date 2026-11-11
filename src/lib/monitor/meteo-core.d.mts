@@ -1,0 +1,13 @@
+import type {Umbrales,HoraMeteo,Prevision,ResumenMeteo,Aviso} from '../../types/monitor';
+export const UMBRALES:Umbrales;
+export function diaLocal(epoch:number,zona?:string):string;
+export function sumarDias(d:string,n:number):string;
+export function fechaValida(d:unknown):boolean;
+export function horasDelDia(d:string,zona?:string):number;
+export function normalizarHoras(json:unknown):HoraMeteo[];
+export function resumirDias(horas:HoraMeteo[],desde:string,hasta:string,fuente:'archivo'|'reciente',zona?:string,now?:number):ResumenMeteo[];
+export function planificarArchivo(dias:{fecha:string;fuente:string;completo:boolean}[],desde:string,hasta:string,maxLotes?:number):{desde:string;hasta:string}[];
+export function contarPendientes(dias:{fecha:string;completo:boolean}[],desde:string,hasta:string):number;
+export function generarAvisos(horas:HoraMeteo[],umbrales?:Umbrales,zona?:string,now?:number):Aviso[];
+export function firmaAvisos(a:Aviso[]):string;
+export function estadoPrevision(p:Prevision|null,now?:number):'sin_datos'|'caducada'|'incompleta'|'vigente';

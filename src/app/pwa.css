@@ -1,0 +1,39 @@
+/* PWA 0.7.0: ergonomía iPhone, sin modificar la estructura de filas/goteros. */
+.pwa-bottom-navigation { display:none; }
+.pwa-connection { position:fixed; inset:0 0 auto; z-index:9999; background:#8e472e; color:white; text-align:center; padding:calc(10px + env(safe-area-inset-top)) 16px 10px; font:600 13px/1.4 system-ui,sans-serif; }
+@media (max-width:900px) {
+  .real-app.notebook-app .main { min-width:0; }
+  .real-app.notebook-app .topbar { min-width:0; }
+  .real-app.notebook-app .mobile-notebook-tabs { overflow-x:auto; flex-wrap:nowrap; scrollbar-width:thin; padding-bottom:10px; }
+  .real-app.notebook-app .mobile-notebook-tabs button { flex:0 0 auto; min-height:44px; white-space:nowrap; }
+}
+@media (max-width:650px) {
+  body { -webkit-text-size-adjust:100%; }
+  .real-app.notebook-app { padding-bottom:calc(75px + env(safe-area-inset-bottom)); }
+  .real-app.notebook-app .main { padding-bottom:18px; }
+  .real-app.notebook-app .brand { padding-top:calc(14px + env(safe-area-inset-top)); }
+  .real-app.notebook-app .intro h1 { font-size:clamp(23px,6.5vw,30px); line-height:1.16; }
+  .real-app.notebook-app .stats-grid { gap:8px; }
+  .real-app.notebook-app .live-topbar { align-items:flex-start; }
+  .real-app.notebook-app .session-controls { flex-wrap:wrap; }
+  .real-app.notebook-app input, .real-app.notebook-app textarea, .real-app.notebook-app select, .auth-layout input { font-size:16px; }
+  .real-app.notebook-app .map-scroll { -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; }
+  .real-app.notebook-app .drip-point, .real-app.notebook-app .row-button { touch-action:manipulation; }
+  .real-app.notebook-app .drip-point { min-height:44px; }
+  .pwa-bottom-navigation { display:grid; position:fixed; bottom:0; left:0; right:0; z-index:60; grid-template-columns:repeat(5,minmax(0,1fr)); gap:2px; padding:7px max(8px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left)); border-top:1px solid #cfdcc8; background:rgba(249,251,246,.97); box-shadow:0 -5px 20px #172e2319; backdrop-filter:blur(12px); }
+  .pwa-bottom-navigation button { display:flex; flex-direction:column; justify-content:center; align-items:center; min-width:0; min-height:54px; border:0; border-radius:10px; background:transparent; color:#526852; font:inherit; gap:3px; padding:5px 1px; cursor:pointer; }
+  .pwa-bottom-navigation button span { font-size:21px; line-height:1; }
+  .pwa-bottom-navigation button small { font-size:10px; font-weight:650; text-align:center; white-space:nowrap; }
+  .pwa-bottom-navigation button.pwa-bottom-active { background:#e1efda; color:#1c5130; }
+  .pwa-bottom-navigation button:disabled { opacity:.45; }
+  .pwa-bottom-navigation button:focus-visible { outline:3px solid #6ba15e; outline-offset:2px; }
+}
+@media (display-mode:standalone) { html { background:#1c3d2f; } }
+/* El contador de plantas permanece a la derecha del nombre también en iPhone. */
+@media (max-width:700px) {
+  .real-app .crop-item-header { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; }
+  .real-app .crop-item-header h3 { flex:1 1 105px; min-width:0; }
+  .real-app .crop-item-header .plant-count-inline:not(.count-editing) { flex:0 0 auto; max-width:55%; margin-left:auto; }
+  .real-app .crop-item-header .plant-count-inline .plant-count-header { justify-content:flex-end; }
+  .real-app .crop-item-header .plant-count-inline .count-pill { white-space:nowrap; }
+}

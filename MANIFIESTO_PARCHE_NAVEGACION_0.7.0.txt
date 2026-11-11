@@ -1,0 +1,5 @@
+Sistema Monitorización 0.7.0 - Parche navegación iPhone
+Basado en v0.7.0 PWA_CORRECCION_ESLINT.
+Modificados: src/components/huerto/PanelHuerto.tsx, src/components/gestion/Tareas.tsx, tests/pwa.test.mjs.
+Sin cambios de SQL, credenciales, autenticación, datos del huerto ni estructura de Supabase.
+Pruebas PWA (6): PASS. Syntax TSX (2): PASS. npm run check: PENDIENTE en Mac.

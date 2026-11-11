@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "dom"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": [],
+    "paths": {"@/*": ["./src/*"]}
+  },
+  "files": ["src/lib/huerto/cosechas.ts", "src/lib/gestion/impacto-meteo.ts"]
+}

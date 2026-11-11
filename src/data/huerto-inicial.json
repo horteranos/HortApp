@@ -1,0 +1,288 @@
+{
+  "id": "huerto-alboraya",
+  "nombre": "Huerto urbano de Alboraya",
+  "localidad": "Alboraya, Valencia",
+  "dimensionAproximadaMetros": {
+    "largo": 7,
+    "ancho": 7
+  },
+  "orientacionFilas": "este-oeste",
+  "separacionFilasAproximadaMetros": 1,
+  "distanciaGoterosCentimetros": 25,
+  "filas": [
+    {
+      "id": "F1",
+      "puntosRiego": 19,
+      "cultivos": [
+        {
+          "id": "f1-salvia",
+          "nombre": "Salvia",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "existente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": "Planta permanente."
+        },
+        {
+          "id": "f1-menta",
+          "nombre": "Menta",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "existente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": "Planta permanente."
+        },
+        {
+          "id": "f1-rucula",
+          "nombre": "R\u00facula",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "presente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f1-brocoli",
+          "nombre": "Br\u00f3coli",
+          "cantidad": 6,
+          "unidadCantidad": "plantas",
+          "estado": "plantado",
+          "fecha": "2026-09-28",
+          "precisionFecha": "exacta",
+          "ubicacionConocida": null,
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "puntosRiego": 18,
+      "cultivos": [
+        {
+          "id": "f2-coliflor",
+          "nombre": "Coliflor",
+          "cantidad": 5,
+          "unidadCantidad": "plantas",
+          "estado": "plantado",
+          "fecha": "2026-09-28",
+          "precisionFecha": "exacta",
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f2-kale",
+          "nombre": "Kale",
+          "cantidad": 2,
+          "unidadCantidad": "plantas",
+          "estado": "presente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f2-pakchoi",
+          "nombre": "Pak choi",
+          "cantidad": 1,
+          "unidadCantidad": "plantas",
+          "estado": "presente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f2-esparrago",
+          "nombre": "Esp\u00e1rrago",
+          "cantidad": 1,
+          "unidadCantidad": "plantas",
+          "estado": "existente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "puntosRiego": 18,
+      "cultivos": [
+        {
+          "id": "f3-repollo",
+          "nombre": "Repollo",
+          "cantidad": 4,
+          "unidadCantidad": "plantas",
+          "estado": "plantado",
+          "fecha": "2026-09-28",
+          "precisionFecha": "exacta",
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f3-remolacha",
+          "nombre": "Remolacha",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "presente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f3-alcachofas",
+          "nombre": "Alcachofas",
+          "cantidad": 3,
+          "unidadCantidad": "plantas",
+          "estado": "existente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": "Extremo oeste de la fila.",
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "puntosRiego": 18,
+      "cultivos": [
+        {
+          "id": "f4-lechugas-originales",
+          "nombre": "Lechugas (iniciales)",
+          "cantidad": 4,
+          "unidadCantidad": "plantas",
+          "estado": "presente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f4-lechugas-anadidas",
+          "nombre": "Lechugas (a\u00f1adidas)",
+          "cantidad": 6,
+          "unidadCantidad": "plantas",
+          "estado": "plantado",
+          "fecha": "2026-10-24",
+          "precisionFecha": "exacta",
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f4-espinacas",
+          "nombre": "Espinacas",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "resembrado",
+          "fecha": "2026-10-25",
+          "precisionFecha": "aproximada",
+          "ubicacionConocida": null,
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "F5",
+      "puntosRiego": 18,
+      "cultivos": [
+        {
+          "id": "f5-cebollas-babosa",
+          "nombre": "Cebollas Babosa",
+          "cantidad": 15,
+          "unidadCantidad": "planteles",
+          "estado": "pendiente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": "Pendientes de trasplante; no se representan como plantadas."
+        },
+        {
+          "id": "f5-ajos",
+          "nombre": "Ajos",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "plantado",
+          "fecha": "2026-10-25",
+          "precisionFecha": "aproximada",
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f5-habas",
+          "nombre": "Habas",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "plantado",
+          "fecha": "2026-10-25",
+          "precisionFecha": "aproximada",
+          "ubicacionConocida": null,
+          "notas": null
+        }
+      ]
+    },
+    {
+      "id": "F6",
+      "puntosRiego": 18,
+      "cultivos": [
+        {
+          "id": "f6-puerros",
+          "nombre": "Puerros",
+          "cantidad": 10,
+          "unidadCantidad": "plantas",
+          "estado": "plantado",
+          "fecha": "2026-09-29",
+          "precisionFecha": "exacta",
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f6-zanahorias",
+          "nombre": "Zanahorias",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "presente",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": null,
+          "notas": null
+        },
+        {
+          "id": "f6-guisantes",
+          "nombre": "Guisantes Rondo",
+          "cantidad": null,
+          "unidadCantidad": null,
+          "estado": "sembrado",
+          "fecha": null,
+          "precisionFecha": null,
+          "ubicacionConocida": "Nueve puntos de goteo consecutivos desde el extremo oeste, junto al limonero.",
+          "notas": "Resiembra el 24/10/2026 solo donde no hab\u00eda germinado. Nueve puntos no equivale necesariamente a nueve plantas."
+        }
+      ]
+    }
+  ],
+  "zonasConocidas": [
+    {
+      "filaId": "F6",
+      "cultivoId": "f6-guisantes",
+      "desdePunto": 1,
+      "hastaPunto": 9,
+      "lado": "oeste",
+      "descripcion": "Zona de guisantes Rondo: 9 goteros consecutivos desde el lado del limonero."
+    }
+  ],
+  "arbolesExterior": [
+    {
+      "nombre": "Limonero",
+      "cercaDeFila": "F6",
+      "lado": "oeste",
+      "fueraDeFila": true
+    }
+  ]
+}

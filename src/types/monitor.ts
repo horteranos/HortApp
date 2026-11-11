@@ -1,0 +1,11 @@
+export type Umbrales={lluvia_prob:number;lluvia_mm:number;racha:number;frio:number;calor:number;humedad_alta:number;humedad_baja:number};
+export type ConfigMonitor={huerto_id:string;latitud:number;longitud:number;ubicacion:string;confirmada:boolean;zona_horaria:string;desde:string;revision:number;lugar_version:number;umbrales:Umbrales};
+export type HoraMeteo={t:number;temperatura:number|null;humedad:number|null;viento:number|null;racha:number|null;lluvia:number|null;probabilidad:number|null;codigo:number|null};
+export type Prevision={horas:HoraMeteo[];consultado_en:string;proveedor:string;latitud_malla?:number;longitud_malla?:number};
+export type ResumenMeteo={fecha:string;fuente:'archivo'|'reciente';completo:boolean;horas_esperadas:number;cobertura:Record<string,number>;tmin:number|null;tmax:number|null;hrmin:number|null;hrmax:number|null;hrmedia:number|null;viento:number|null;racha:number|null;lluvia:number|null};
+export type DiarioEntrada={id:string;huerto_id:string;fecha:string;titulo:string|null;texto:string;tipo:string;fila_id:string|null;fila_codigo:string|null;plantacion_id:string|null;cultivo:string|null;puntos_snapshot:{id:string;numero:number}[];creado_por:string|null;creado_en:string;actualizado_en:string;revision:number;anulado_en:string|null};
+export type MonitorDatos={config:ConfigMonitor;historial:ResumenMeteo[];prevision:Prevision|null;sync:{ultimo_intento:string|null;ultimo_ok:string|null;mensaje:string|null}|null;dias:{fecha:string;fuente:string;completo:boolean}[];dispositivos:{id:string;nombre:string;creado_en:string;ultimo_uso:string|null;revocado_en:string|null}[]};
+export type ResultadoMonitor<T>={ok:true;datos:T}|{ok:false;error:string};
+export type FiltroDiario={desde?:string;hasta?:string;fila?:string;tipo?:string;texto?:string;pagina?:number;incluir_anulados?:boolean};
+export type PaginaDiario={entradas:DiarioEntrada[];total:number;pagina:number;limite:number};
+export type Aviso={id:string;tipo:string;titulo:string;icono:string;nivel:string;inicio:number;fin:number;dia:string;horas:number;probabilidad:number|null;lluvia:number|null;racha:number|null;tmin:number|null;tmax:number|null;hrmin:number|null;hrmax:number|null};

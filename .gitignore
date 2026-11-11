@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+npm-debug.log*
+
+# Private device authorizations, never commit or share.
+Sistema_Monitorizacion_Mac*.json
+*.log

@@ -1,0 +1,10 @@
+SISTEMA MONITORIZACION 0.5.0
+Base: version 0.4.0 validada por el usuario.
+Nuevas migraciones: 08_meteorologia_diario.sql, 09_comprobar_monitor.sql.
+Nuevos modulos: src/components/monitor, src/lib/monitor, src/types/monitor.ts,
+src/app/aplicacion/monitor-actions.ts, src/app/monitor.css, scripts/macos.
+Integracion: PanelHuerto, HistorialCultivos, layout, tipos Database, nombre publico.
+No se cambian las versiones de dependencias de la base 0.4.0.
+Se incluyen fuentes y pruebas; no node_modules, .next, .git, claves ni datos privados.
+No ejecutar migraciones antiguas para instalar este parche.
+Consultar INSTRUCCIONES_0.5.0.md y VALIDACION_0.5.0.md.

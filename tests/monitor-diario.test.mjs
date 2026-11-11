@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {exportarTXT,exportarHTML,nombreExportacion,ubicacionEntrada,escapar} from '../src/lib/monitor/diario-export.mjs';
+const e={id:'1',fecha:'2026-11-01',tipo:'riego',titulo:'Revision',texto:'Linea 1\nLinea 2: \u00e1 \u00f1 \ud83c\udf31 <script>alert(1)</script>',fila_codigo:'F5',cultivo:'Cebolla',puntos_snapshot:[{id:'x',numero:3}],creado_por:'id-de-usuario',revision:0,anulado_en:null};
+test('export filenames use only new system name',()=>{assert.equal(nombreExportacion({desde:'2026-10-01',hasta:'2026-11-01'},'pdf'),'Sistema_Monitorizacion_Diario_2026-10-01_2026-11-01.pdf');});
+test('plain text preserves unicode and line breaks',()=>assert.ok(exportarTXT([e]).includes(e.texto)));
+test('PDF HTML escapes arbitrary note content',()=>{const h=exportarHTML([e]);assert.ok(h.includes('&lt;script&gt;'));assert.ok(!h.includes('<script>'));assert.ok(h.includes('default-src'));});
+test('attributes and quote injection are escaped',()=>assert.equal(escapar('"\'&<>'),'&quot;&#39;&amp;&lt;&gt;'));
+test('export records historical point numbers, not current positions',()=>assert.ok(ubicacionEntrada(e).includes('3 (numeros al registrar)')));
+test('export includes period, filters and total entries',()=>{const t=exportarTXT([e],{desde:'2026-10-01',tipo:'riego'});assert.ok(t.includes('Entradas: 1'));assert.ok(t.includes('2026-10-01'));assert.ok(t.includes('Tipo: Riego'));});
+test('annulled entries remain labelled when included',()=>assert.ok(exportarTXT([{...e,anulado_en:'2026-11-01'}]).includes('ANULADA')));
+test('empty exports explicitly say there are no entries',()=>assert.ok(exportarHTML([]).includes('No hay entradas')));
+test('exports do not truncate long notes',()=>{const texto='a'.repeat(8000);assert.ok(exportarTXT([{...e,texto}]).includes(texto));assert.ok(exportarHTML([{...e,texto}]).includes(texto));});

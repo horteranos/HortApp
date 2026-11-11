@@ -1,0 +1,5 @@
+Sistema Monitorización 0.7.0 — primera PWA iPhone
+Base: 0.6.1 (Next.js, TypeScript, Supabase existente)
+Añade: manifiesto, iconos, service worker seguro sin caché privada, navegación inferior iPhone, estilos safe-area y guía GitHub/Vercel/iPhone.
+Sin nuevas migraciones SQL. Sin notificaciones push ni uso offline de datos.
+Pendiente de validar en macOS, Supabase real y despliegue Vercel.

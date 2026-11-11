@@ -1,0 +1,15 @@
+SISTEMA MONITORIZACION v0.6.1 - CODIGO COMPLETO PARA MACOS
+Origen: Sistema_Monitorizacion_0.6.0_macOS_SQL10_y_TS2352_CORREGIDOS.zip
+
+Actualizaciones:
+- Recuento REAL sm_recuentos visible junto al nombre; el recuento inicial se distingue del vigente.
+- Edicion del numero en la propia cabecera, sin bloque duplicado inferior.
+- Retiradas la interfaz y servidor de diagnostico de plagas/enfermedades/fotografias.
+- Mantenido el Diario y sus archivos multimedia e historial antiguos.
+- Avisos meteorologicos 72h con efectos en cultivos presentes y resumen en el plano.
+- Calendario con fechas orientativas, separadas de cosechas realmente registradas.
+
+SQL: No hay migracion nueva. Se conservan 04-11 historicos para instalaciones pendientes.
+Validacion: 65 fuentes TS/TSX parseadas; 11 pruebas focalizadas OK; librerias nuevas TypeScript strict OK.
+Pendiente: npm run check y pruebas de Supabase en el Mac del usuario.
+No incluye: node_modules, .next, .env.local, contrasenas ni datos de Supabase.

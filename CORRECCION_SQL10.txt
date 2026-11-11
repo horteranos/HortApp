@@ -1,0 +1,13 @@
+CORRECCION DE SQL 10 (04-11-2026)
+
+Se corrigio la sentencia EXECUTE format() de la politica sm_actualizar.
+Tres sustituciones %I requieren tres argumentos: t,t,t.
+
+Si ya tienes el ZIP 0.6.0, no necesitas reinstalar la aplicacion.
+Ejecuta el contenido de supabase/10_ampliacion_0_6_0.sql
+completo en una nueva consulta de Supabase SQL Editor, con rol postgres.
+Comprueba el mensaje "Migracion 10 aplicada" y despues ejecuta
+supabase/11_comprobar_ampliacion.sql (14 comprobaciones OK).
+
+No vuelvas a aplicar las migraciones 01-09 si ya estan correctas.
+Conserva copia de seguridad de la base de datos.

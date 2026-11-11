@@ -1,0 +1,67 @@
+/* Sistema Monitorización v0.6.0: extensiones de agenda, semillero y vigilancia. */
+.new-view{padding:24px 26px;}
+.gestion-cols{display:grid;grid-template-columns:minmax(280px,.86fr) minmax(280px,1.14fr);gap:24px;align-items:start;margin-top:20px;}
+.gestion-form,.plantel-editor{background:#f8faf6;border:1px solid #e2eadd;border-radius:12px;padding:20px;display:grid;gap:14px;}
+.gestion-form h3,.gestion-items h3{margin:0;font-size:16px;color:#294c36;}
+.gestion-form label,.plant-count-form label,.adjuntos-subir label{display:grid;gap:7px;color:#47604e;font-weight:650;font-size:12px;}
+.gestion-form input:not([type=checkbox]):not([type=file]),.gestion-form select,.gestion-form textarea,.plant-count-form input,.plantel-editor select,.plantel-editor textarea,
+.gestion-filter select{border:1px solid #c8d7c3;border-radius:8px;background:#fff;padding:9px 11px;min-height:40px;width:100%;font:inherit;color:#24432f;}
+.gestion-form input[type=file],.adjuntos-subir input[type=file]{width:100%;font-size:12px;max-width:100%;}
+.gestion-items{display:grid;gap:9px;align-content:start;}
+.gestion-entry{padding:15px 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:17px;border:1px solid #e2e9dc;background:#fff;border-radius:10px;}
+.gestion-entry h4{margin:5px 0;font-size:14px;color:#2e4e35;}
+.gestion-entry p{font-size:12px;line-height:1.55;white-space:pre-wrap;margin:5px 0;color:#536a58;}
+.gestion-entry small{font-size:11px;color:#788775;}
+.gestion-entry-buttons{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;}
+.gestion-filter{font-size:12px;display:flex;align-items:center;gap:8px;}
+.gestion-filter select{width:auto;}
+.plantel-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:24px 0;}
+.plantel-plaza{border:1px dashed #c8d7c2;border-radius:12px;min-height:126px;background:#fbfdf9;color:#708370;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px;cursor:pointer;}
+.plantel-plaza strong{max-width:100%;font-size:12px;overflow-wrap:anywhere;color:#3a6042;}
+.plantel-plaza small{font-size:10px;}
+.plantel-plaza .plaza-icono{font-size:25px;}
+.plantel-plaza .plaza-num{align-self:flex-start;font-size:10px;font-weight:800;color:#8e9f88;}
+.plaza-ocupada{border:1px solid #b6cfaa;background:linear-gradient(150deg,#f2f8eb,#eaf3e6);}
+.plaza-seleccionada{outline:3px solid #467e4c;outline-offset:2px;}
+.plantel-editor{margin-top:14px;max-width:820px;}
+.gestion-fieldset{border:0;padding:0;display:grid;gap:14px;min-width:0;}
+.plant-count{margin:0 0 15px;padding:10px 4px 13px;border-bottom:1px solid #ebf0e5;font-size:12px;}
+.plant-count-header{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:8px;}
+.plant-count p{line-height:1.4;margin:5px 0 0;}
+.plant-count-form{padding:13px 0;display:grid;gap:10px;}
+.gestion-checkbox{display:flex!important;flex-direction:row;align-items:start;gap:9px;line-height:1.5;}
+.gestion-checkbox input{width:17px;height:17px;flex-shrink:0;accent-color:#245c40;}
+.calendar-note{background:#f5edfa;border-left-color:#9866ad;}
+.calendar-task{background:#e8effa;border-left-color:#628cbf;}
+.agenda-extras{display:grid;gap:9px;}
+.agenda-note{border:1px solid #eadcf1;background:#fdfaff;padding:13px 17px;border-radius:9px;}
+.agenda-task{border-color:#d9e5f5;background:#f7faff;}
+.agenda-note h4{margin:5px 0 7px;font-size:13px;color:#354938;}
+.agenda-note small{font-size:10px;color:#6d5778;font-weight:700;}
+.agenda-note p{white-space:pre-wrap;font-size:13px;line-height:1.55;max-width:850px;}
+.dictado{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-4px 0 2px;}
+.dictado small,.dictado p{font-size:11px;color:#65785f;line-height:1.5;max-width:460px;}
+.adjuntos{margin-top:10px;border-top:1px solid #eef1eb;padding-top:7px;}
+.adjuntos-panel{padding:13px 0;display:grid;gap:12px;}
+.adjuntos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;}
+.adjuntos-grid figure{margin:0;border:1px solid #dce7d5;border-radius:8px;overflow:hidden;background:#f6faf4;}
+.adjuntos-grid figure img,.adjuntos-grid video{height:125px;max-width:100%;width:100%;object-fit:contain;background:#101c14;}
+.adjuntos-grid figcaption{font-size:10px;color:#536354;padding:6px;overflow-wrap:anywhere;}
+.adjuntos-subir{display:grid;gap:9px;border-top:1px solid #e9ede6;padding-top:11px;}
+.new-view input,.new-view textarea,.new-view select{max-width:100%;}
+@media(max-width:1050px){.gestion-cols{grid-template-columns:1fr;}.plantel-grid{grid-template-columns:repeat(4,minmax(0,1fr));}}
+@media(max-width:680px){.new-view{padding:18px 13px;}.plantel-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.gestion-entry{flex-direction:column;}.gestion-entry-buttons{flex-direction:row;gap:13px;}.calendar-grid{min-width:740px;}.monitor-fields{grid-template-columns:1fr;}}
+
+/* 0.6.1: current plant count is inline with each crop heading, not a second readout. */
+.real-app .crop-item-header {align-items:center;flex-wrap:wrap;}
+.real-app .crop-item-header h3 {flex:1 1 190px;min-width:0;}
+.plant-count-inline {flex:0 1 auto;max-width:100%;padding:0;margin:0;border:0;}
+.plant-count-inline.count-editing {flex-basis:100%;order:3;}
+.plant-count-inline .plant-count-header {justify-content:flex-end;gap:8px;}
+.plant-count-inline .plant-count-header .text-button {font-size:11px;white-space:nowrap;}
+.plant-count-inline .count-pill {display:inline-block;padding:6px 10px;border-radius:999px;white-space:normal;text-align:center;}
+.plant-count-inline .count-pill-verified {background:#e4f3dc;color:#235f37;}
+.plant-count-inline .count-pill-unverified {background:#f7f1df;color:#75663e;}
+.plant-count-inline .plant-count-form {width:min(520px,100%);margin:14px 0;padding:14px;border:1px solid #dde7d5;border-radius:10px;background:#f8faf4;}
+.plant-count-message {margin:7px 0;font-size:11px;line-height:1.4;color:#457047;max-width:260px;}
+@media(max-width:700px) {.plant-count-inline:not(.count-editing) {flex-basis:auto;}.real-app .crop-item-header h3{flex-basis:100%;}.plant-count-inline .plant-count-header{justify-content:flex-start;}}

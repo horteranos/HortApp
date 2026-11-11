@@ -1,0 +1,11 @@
+SISTEMA MONITORIZACION 0.6.0 - paquete completo para macOS
+Base: ZIP original 0.5.0 archivado; el estado real de instalacion 0.5.0 no esta confirmado.
+SQL: 10_ampliacion_0_6_0.sql, 11_comprobar_ampliacion.sql (tras 08/09).
+Nuevas vistas: tareas, semillero (20 plazas), rotaciones, plagas/enfermedades.
+Ampliaciones: diario de voz y multimedia, calendario con notas/tareas, recuento por lote.
+Optativo: OpenAI API para reconocimiento preliminar de sintomas por fotos, sin autoenvios.
+Seguridad: Supabase Auth + RLS; bucket privado; no llaves privadas en paquete.
+Validacion local limitada: 59 pruebas antiguas + 4 nuevas, 66 fuentes TS/TSX sin errores sintacticos.
+Compilacion Next completa y migraciones reales pendientes en el Mac/Supabase del usuario.
+NO incluir: node_modules, .next, .env.local, .git, archivos privados del Mac.
+Lee INSTRUCCIONES_0.6.0.md y VALIDACION_0.6.0.md.

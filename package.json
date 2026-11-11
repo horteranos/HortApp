@@ -1,0 +1,43 @@
+{
+  "name": "sistema-monitorizacion",
+  "version": "0.7.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "node --import tsx --test tests/*.test.mjs tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run test && npm run typecheck && npm run lint && npm run build",
+    "preinstall": "node scripts/comprobar-node.mjs",
+    "test:monitor": "node --test tests/monitor-*.test.mjs",
+    "mac:instalar": "node scripts/macos/instalar.mjs",
+    "mac:comprobar": "node scripts/macos/control.mjs comprobar",
+    "mac:sincronizar": "node scripts/macos/control.mjs sincronizar",
+    "mac:desinstalar": "node scripts/macos/control.mjs desinstalar"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.118.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@next/eslint-plugin-next": "16.4.3",
+    "eslint": "10.14.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "16.4.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
